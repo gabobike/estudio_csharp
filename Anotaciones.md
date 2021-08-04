@@ -1,3 +1,23 @@
+
+
+# ¿Qué es .NET?
+
+Cuando una persona usa el término *.NET*, lo que quiere decir  depende en gran medida del contexto. En esta unidad, obtendrá  información sobre .NET, abordándolo como un ecosistema.  En otras  palabras, descubrirá que .NET es una colección de muchos elementos y  personas que, de forma conjunta, crean un entorno eficaz para la  compilación de aplicaciones.
+
+Sugerencia 
+
+A veces, las personas piensan equivocadamente que el lenguaje de programación C# *es* .NET. Sin embargo, C# y .NET son distintos. C# es una sintaxis de  lenguaje de programación. Como parte de la sintaxis, puede hacer  referencia y llamar a métodos definidos en bibliotecas de código .NET, o ensamblados. Además, para crear un ensamblado a partir del código de  C#, se usa el compilador de C# que se instala con el SDK de .NET. El  entorno de ejecución de .NET ejecuta ensamblados de .NET. Entender estas distinciones le ayudará a asimilar conceptos importantes conforme vaya  aprendiendo más sobre .NET y C#.
+
+
+
+
+
+
+
+
+
+
+
 Clase 01
 
 ## Identificadores

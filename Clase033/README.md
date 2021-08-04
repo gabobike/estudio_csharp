@@ -7,3 +7,4 @@ Clase Math
 vamos a realizar un metodo para calcular la distancia entre dos puntos, 
 
 aprendemos a usar this 
+
