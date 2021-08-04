@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{39A2DCDE-D4DC-48FA-BBB2-CBE2B0075994}</ProjectGuid>
+    <ProjectGuid>{40306E78-CC65-4A75-A6C0-E2A2670B9875}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Clase33</RootNamespace>
-    <AssemblyName>Clase33</AssemblyName>
+    <RootNamespace>Clase033</RootNamespace>
+    <AssemblyName>Clase033</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
