@@ -18,10 +18,26 @@ namespace Clase037
 
             // Array de objetos
 
+            Empleados Ana = new Empleados("Ana", 27);
+
             Empleados[] arrayEmpleados = new Empleados[2];
-            
 
+            arrayEmpleados[0] = new Empleados("Sara", 37);
 
+            arrayEmpleados[1] = Ana;
+
+            // array de tipos o clases anónimas
+
+            var persona = new[]
+            {
+                new{Nombre="Juan", Edad=19},
+
+                new{Nombre="maria", Edad=19},
+
+                new{Nombre ="Diana", Edad= 35}
+            };
+
+            Console.WriteLine(persona[1]);
         }
     }
 
