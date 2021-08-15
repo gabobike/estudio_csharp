@@ -1,4 +1,9 @@
+# ¿Qué es Csharp?
 
+Es un Lenguaje de Programación para crear aplicaciones de escritorio robustas y para integrarlo con otras tecnologías, entornos de desarrollo y lenguajes de programación, la forma como se pronuncia es C Sharp (C#) y es quizás el mejor lenguaje de programación que tiene la empresa Microsoft en la actualidad.
+Este Lenguaje como muchos otros soporta el uso de Variables, Constantes, Operadores, Instrucciones de Control, Clases y Objetos, Métodos, Arrays, Strings, etc.
+
+La Sintaxis de C# esta basada en otro Lenguaje de Programación que es C ++ el cual trabaja por medio de modelos de objetos y el uso de Clases, por ejemplo podemos crear una clase llamada Postres
 
 # ¿Qué es .NET?
 
