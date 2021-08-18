@@ -1,0 +1,222 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Clase053
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Caballo Babieca = new Caballo("Babieca");
+
+            ISaltoConPatas ImiBabieca = Babieca;
+
+            Humano Juann = new Humano(" Juan");
+
+            Gorila Copito = new Gorila("Copito");
+
+            // aplicando metodo de sustitucion
+
+            Mamiferos[] almacenAnimales = new Mamiferos[3];
+
+            almacenAnimales[0] = Babieca;
+
+            almacenAnimales[1] = Juann;
+
+            almacenAnimales[2] = Copito;
+
+            for (int i = 0; i < 3; i++)
+            {
+                almacenAnimales[i].pensar();
+            }
+
+            Mamiferos miMamifero = new Mamiferos("");
+
+
+
+            /*Mamiferos animal = new Mamiferos("Bucéfalo");
+
+            Caballo Bucefalo = new Caballo("Bucéfalo");
+
+            animal = Bucefalo;*/
+
+            /*Juan.getNombre();
+
+            Babieca.getNombre();
+
+            Copito.getNombre();*/
+
+            Ballena miWally = new Ballena("Wally");
+
+            miWally.nadar();
+
+            Console.WriteLine("Patas utilizadas en el salto de Babieca: " + ImiBabieca.numeroPatas());
+
+            Lagartija Juancho = new Lagartija("Juancho");
+
+            Juancho.getNombre();
+
+            Humano Juan = new Humano("Juan");
+
+            Juan.respirar();
+
+        }
+    }
+
+    interface IMamiferosTerrestre //por conveccion el nombre de las interfaces comienzan con I mayuscula
+    {
+        int numeroPatas(); // los metodos no llevan modificar de acceso 
+    }
+
+    interface IAnimalesYDeportes
+    {
+        string tipoDeporte();
+
+        Boolean esOlimpico();
+    }
+
+    interface ISaltoConPatas
+    {
+        int numeroPatas();
+    }
+
+    abstract class Animales
+    {
+        public void respirar()
+        {
+            Console.WriteLine("Soy capaz de respirar");
+        }
+
+        public abstract void getNombre();
+    }
+
+    class Lagartija : Animales
+    {
+        public Lagartija(String nombre)  // constructor 
+        {
+            nombreReptil = nombre;
+        }
+        public override void getNombre()
+        {
+            Console.WriteLine("El nombre del reptile es:" + nombreReptil);
+        }
+
+        private String nombreReptil; //campo de clase 
+
+    }
+    class Mamiferos:Animales
+    {
+        public Mamiferos(String nombre)
+        {
+            nombreSerVivo = nombre;
+        }
+       
+        public virtual void pensar()
+        {
+            Console.WriteLine("Pensamiento básico instintivo");
+        }
+
+        public void cuidarCrias()
+        {
+
+            Console.WriteLine("Cuido de mis crías hasta que se valgan por si solas");
+
+        }
+
+        public override void getNombre() // con override sobreescribimos el metodo abstracto getNombre()
+        {
+            Console.WriteLine("El nombre  del mamífero es:" + nombreSerVivo);
+        }
+
+
+
+        private String nombreSerVivo;
+
+    }
+
+    class Ballena : Mamiferos
+    {
+        public Ballena(String nombreBallena) : base(nombreBallena)
+        {
+
+        }
+
+        public void nadar()
+        {
+            Console.WriteLine("Soy capaz de nadar");
+        }
+
+
+    }
+
+    class Caballo : Mamiferos, IMamiferosTerrestre, IAnimalesYDeportes, ISaltoConPatas // primero va la clase y despues la interfaces
+    {
+        public Caballo(String nombreCaballo) : base(nombreCaballo)
+        {
+
+        }
+        public void galopar()
+        {
+            Console.WriteLine("Soy capaz de galopar");
+
+            // respirar();
+        }
+
+        int IMamiferosTerrestre.numeroPatas() // debemos dejar de prescindir del mofificador de acceso public
+        {
+            return 4;
+        }
+
+        public string tipoDeporte()
+        {
+            return "Hípica";
+        }
+
+        public Boolean esOlimpico()
+        {
+            return true;
+        }
+
+        int ISaltoConPatas.numeroPatas() // debemos dejar de prescindir del mofificador de acceso public
+        {
+            return 2;
+        }
+    }
+
+    class Humano : Mamiferos
+    {
+        public Humano(String nombreHumano) : base(nombreHumano)
+        {
+
+        }
+        public override void pensar()
+        {
+            Console.WriteLine("Soy capaz de pensar ¿?");
+        }
+    }
+
+    class Gorila : Mamiferos, IMamiferosTerrestre
+    {
+        public Gorila(String nombreGorila) : base(nombreGorila)
+        {
+
+        }
+
+        public override void pensar()
+        {
+            Console.WriteLine("Pensamiento instintivo avanzado");
+        }
+        public void trepar()
+        {
+            Console.WriteLine("Soy capaz de trepar");
+        }
+
+        public int numeroPatas()
+        {
+            return 2;
+        }
+    }
+}
